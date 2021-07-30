@@ -1,5 +1,12 @@
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
 @mixin flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+

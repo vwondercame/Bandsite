@@ -1,10 +1,33 @@
 @use "../utilities/mixins" as *;
-@use "../partials/utilities/variables" as *;
+@use "../utilities/variables" as *;
+@use "../utilities/typography";
 
 .header {
     background-color: $bandSite-black;
 }
 
+
 .title-container {
     @include flexCenter;
+    &__title {
+        font-family: 'AvenirNext LT Pro';
+        text-transform: uppercase;
+        }
+    &__link {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 500;
+        color: white;
+    }
+}
+
+//navigation styles
+
+.nav {
+    // @include flexCenter;
+    &__list {
+        @include flexCenter;
+        justify-content: space-between;
+    }
+
 }
