@@ -41,9 +41,16 @@
 
 .nav__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style: none;
+  padding-bottom: 1rem;
+}
+.nav__link {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
 }
 
 *, *::before, *::after {

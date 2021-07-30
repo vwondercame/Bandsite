@@ -24,10 +24,18 @@
 //navigation styles
 
 .nav {
-    // @include flexCenter;
     &__list {
-        @include flexCenter;
-        justify-content: space-between;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        list-style: none;
+        padding-bottom: 1rem;
+    }
+    &__link {
+        font-family: 'AvenirNext LT Pro';
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
     }
 
 }
