@@ -1,3 +1,10 @@
+@use "./partials/utilities/mixins" as *;
+@use "./partials/utilities/variables" as *;
+
+@use "./partials/layout/header";
+
+
+
 *, *::before, *::after {
     box-sizing: border-box;
 }

@@ -1,0 +1,10 @@
+@use "../utilities/mixins" as *;
+@use "../partials/utilities/variables" as *;
+
+.header {
+    background-color: $bandSite-black;
+}
+
+.title-container {
+    @include flexCenter;
+}

@@ -1,3 +1,7 @@
+.header {
+  background-color: #323232;
+}
+
 .title-container {
   display: flex;
   justify-content: center;
