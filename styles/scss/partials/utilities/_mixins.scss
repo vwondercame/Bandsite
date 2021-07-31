@@ -1,18 +1,26 @@
+@use 'variables' as *;
+
 @mixin tablet {
-    @media (max-width:$breakpoint-tablet) {
+    @media (min-width:$breakpoint-tablet) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (max-width:$breakpoint-desktop) {
+    @media (min-width:$breakpoint-desktop) {
         @content;
     }
 }
 
-
-@mixin flex-align-center {
+@mixin flex($justifyContent, $alignItems){
     display: flex;
-    align-items: center;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
 }
 
+
+@mixin text($fontFamily, $fontSize, $fontWeight) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+  }

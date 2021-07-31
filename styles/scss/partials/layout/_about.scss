@@ -1,0 +1,24 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+@use "../utilities/typography" as *;
+
+.about {
+    padding: 1rem;
+    &__title {
+        @include text('AvenirNext LT Pro', 2rem, 600);
+        display: flex;
+        justify-content: flex-start;
+        color: $bandSite-black;
+    }
+
+    &__img {
+        width: 24rem;
+        @include tablet {
+            width: 30rem;
+        }
+    }
+}
+
+.about__box {
+    width: 25rem;
+}

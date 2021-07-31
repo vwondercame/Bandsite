@@ -25,8 +25,8 @@
 
 .title-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .title-container__title {
   font-family: "AvenirNext LT Pro";
@@ -43,14 +43,57 @@
   display: flex;
   justify-content: space-around;
   padding-left: 0;
-  list-style: none;
   padding-bottom: 1rem;
+  margin: 0;
+  list-style: none;
 }
 .nav__link {
   font-family: "AvenirNext LT Pro";
   font-size: 1rem;
   text-decoration: none;
   color: white;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(../../../../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 37vh;
+}
+.hero__heading {
+  font-family: "AvenirNext LT Pro";
+  font-size: 2rem;
+  font-weight: 0;
+  color: white;
+  padding-left: 1.5rem;
+}
+
+.about {
+  padding: 1rem;
+}
+.about__title {
+  font-family: "AvenirNext LT Pro";
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  color: #323232;
+}
+.about__container {
+  display: flex;
+  justify-content: center;
+}
+.about__img {
+  width: 24rem;
+}
+@media (min-width: 768px) {
+  .about__img {
+    width: 30rem;
+  }
 }
 
 *, *::before, *::after {

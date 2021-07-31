@@ -1,0 +1,27 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+@use "../utilities/typography" as *;
+
+.hero {
+    @include flex(flex-start, center);
+    background-image: url(../../../../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 37vh;  
+    // @include tablet {
+    //   height: 80vh;
+    // }
+    // @include desktop {
+    //     height: 85vh;
+    // }
+
+    &__heading {
+        font-family: 'AvenirNext LT Pro';
+        font-size: 2rem;
+        font-weight: 00;
+        color: white;
+        padding-left: 1.5rem;
+    }
+  
+  }

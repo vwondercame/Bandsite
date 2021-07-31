@@ -8,8 +8,7 @@
 
 
 .title-container {
-    @include flex-align-center;
-    justify-content: center;
+    @include flex(center, center);
     &__title {
         font-family: 'AvenirNext LT Pro';
         text-transform: uppercase;
@@ -29,8 +28,9 @@
         display: flex;
         justify-content: space-around;
         padding-left: 0;
-        list-style: none;
         padding-bottom: 1rem;
+        margin: 0;
+        list-style: none;
     }
     &__link {
         font-family: 'AvenirNext LT Pro';
