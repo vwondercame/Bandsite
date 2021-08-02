@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 2rem;
     background-color: $bandSite-black;
     color: white;
     @include text('AvenirNext LT Pro', 1rem, 400);
@@ -35,5 +35,38 @@
 
     &__copyright {
         font-size: 0.9rem;
+    }
+
+    @include tablet {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &__title-container {
+            @include flex-align-center;
+            justify-content:space-between;
+            width: 52%;
+        }
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__contact-container {
+            @include flex-align-center;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        &__logo {
+            position: absolute;
+            right: 10rem;
+            top: 0rem;
+        }
+
+        &__copyright {
+            margin: 4rem 2rem 2rem;
+            font-size: 1rem;
+        }
+
     }
 }
