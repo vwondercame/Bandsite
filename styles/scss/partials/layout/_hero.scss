@@ -3,23 +3,33 @@
 @use "../utilities/typography" as *;
 
 .hero {
-    @include flex(flex-start, center);
     background-image: url(../../../../assets/Images/hero-bio.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 37vh;  
+    position: relative;
     @include tablet {
       min-height: 75vh;
       max-height: 83vh;
     }
 
+    &__overlay {
+      background-color: rgba($color:$bandSite-black, $alpha: 0.5);
+      position:absolute;
+      width: 100%;
+      height: 100%;
+  }
+
     &__heading {
-        font-family: 'AvenirNext LT Pro';
-        font-size: 2rem;
-        font-weight: 00;
-        color: white;
-        padding-left: 1.5rem;
+      @include flex-align-center;
+      height: 100%;
+      margin: 0;
+      font-family: 'AvenirNext LT Pro';
+      font-size: 2rem;
+      font-weight: 00;
+      color: white;
+      padding-left: 1.5rem;
         @include tablet {
             font-size: 3.75rem;
         }

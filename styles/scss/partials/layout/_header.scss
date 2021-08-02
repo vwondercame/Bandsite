@@ -4,20 +4,23 @@
 
 .header {
     background-color: $bandSite-black;
-}
-
-
-.title-container {
-    @include flex(center, center);
-    &__title {
-        font-family: 'AvenirNext LT Pro';
-        text-transform: uppercase;
-        }
+    &__container {
+        @include flex(center, center);
+        padding: 1rem;
+    }
     &__link {
         text-decoration: none;
-        font-size: 2rem;
-        font-weight: 500;
-        color: white;
+    }
+
+    &__logo {
+        height: 1.5rem;
+    }
+    
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem;
     }
 }
 
@@ -32,11 +35,28 @@
         margin: 0;
         list-style: none;
     }
+
     &__link {
         font-family: 'AvenirNext LT Pro';
         font-size: 1rem;
         text-decoration: none;
         color: white;
+    }
+
+    & a:hover {
+        border-bottom: 3px solid white;
+    }
+
+    @include tablet {
+        display: flex;
+        width: 50%;
+
+        &__list {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-bottom: 0;
+        }
     }
 
 }
