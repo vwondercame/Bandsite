@@ -9,12 +9,10 @@
     background-position: center;
     background-repeat: no-repeat;
     min-height: 37vh;  
-    // @include tablet {
-    //   height: 80vh;
-    // }
-    // @include desktop {
-    //     height: 85vh;
-    // }
+    @include tablet {
+      min-height: 75vh;
+      max-height: 83vh;
+    }
 
     &__heading {
         font-family: 'AvenirNext LT Pro';
@@ -22,6 +20,9 @@
         font-weight: 00;
         color: white;
         padding-left: 1.5rem;
+        @include tablet {
+            font-size: 3.75rem;
+        }
     }
   
   }

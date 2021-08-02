@@ -18,6 +18,10 @@
     align-items: $alignItems;
 }
 
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+  }
 
 @mixin text($fontFamily, $fontSize, $fontWeight) {
     font-family: $fontFamily;
