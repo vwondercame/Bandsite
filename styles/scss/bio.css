@@ -248,6 +248,27 @@
   font-family: "AvenirNext LT Pro";
   font-size: 1rem;
   font-weight: 400;
+  line-height: 1.5;
+}
+.footer__title {
+  font-size: 2rem;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+}
+.footer__socials-link {
+  margin-right: 3rem;
+}
+.footer__socials-icon {
+  height: 2rem;
+}
+.footer__logo {
+  height: 1.5rem;
+  margin-top: 5rem;
+}
+.footer__copyright {
+  font-size: 0.9rem;
 }
 
 *, *::before, *::after {

@@ -10,4 +10,30 @@
     background-color: $bandSite-black;
     color: white;
     @include text('AvenirNext LT Pro', 1rem, 400);
+    line-height: 1.5;
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__socials-link {
+        margin-right: 3rem;
+    }
+
+    &__socials-icon {
+        height: 2rem;
+    }
+
+    &__logo {
+        height: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    &__copyright {
+        font-size: 0.9rem;
+    }
 }
