@@ -2,6 +2,8 @@
 @use "../utilities/variables" as *;
 @use "../utilities/typography" as *;
 
+//header styling
+
 .header {
     background-color: $bandSite-black;
     &__container {
@@ -16,12 +18,17 @@
         height: 1.5rem;
     }
     
+//tablet breakpoint styling
+
     @include tablet {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         padding: 1rem;
     }
+
+//desktop breakpoint styling
+
 }
 
 //navigation styles

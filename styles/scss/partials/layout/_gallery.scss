@@ -34,4 +34,13 @@
             margin: 1rem;
         }
     }
+
+    @include desktop {
+        padding: 2rem 5rem;
+
+        &__item {
+            max-height: 17rem;
+            max-width: 27%;
+        }
+    }
 }

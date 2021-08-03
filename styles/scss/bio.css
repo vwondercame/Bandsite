@@ -177,6 +177,22 @@
     align-self: flex-start;
   }
 }
+@media (min-width: 1280px) {
+  .about {
+    margin: 0 13rem;
+  }
+  .about__title {
+    margin: 2rem -2rem;
+    font-size: 3rem;
+  }
+  .about__img {
+    max-height: 100%;
+    max-width: 70rem;
+  }
+  .about__box {
+    margin: 1rem 0;
+  }
+}
 
 .band-description {
   font-family: "AvenirNext LT Pro";
@@ -222,6 +238,20 @@
     line-height: 1.75;
   }
 }
+@media (min-width: 1280px) {
+  .band-description__title {
+    margin: 1rem 0;
+  }
+  .band-description__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .band-description__p {
+    margin-right: 2rem;
+    width: 43%;
+  }
+}
 
 .gallery {
   font-family: "AvenirNext LT Pro";
@@ -259,6 +289,15 @@
   .gallery__item {
     width: 29%;
     margin: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery {
+    padding: 2rem 5rem;
+  }
+  .gallery__item {
+    max-height: 17rem;
+    max-width: 27%;
   }
 }
 
@@ -312,8 +351,11 @@
   .footer__contact-container {
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: space-around;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .footer__contact-info {
+    margin-left: 2rem;
   }
   .footer__logo {
     position: absolute;
@@ -323,6 +365,11 @@
   .footer__copyright {
     margin: 4rem 2rem 2rem;
     font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 0 10rem;
   }
 }
 

@@ -11,6 +11,8 @@
     &__title {
         @include text('AvenirNext LT Pro', 2rem, 600);
         color: $bandSite-black;
+
+        //tablet breakpoint styling
         @include tablet {
             font-size: 2.25rem;
             align-self: flex-start;
@@ -60,12 +62,33 @@
             align-self: flex-start;
         }
     }
+
+    //desktop breakpoint styling
+    @include desktop {
+        margin: 0 13rem;
+
+        &__title {
+            margin: 2rem -2rem;
+            font-size: 3rem;
+        }
+
+        &__img {
+            max-height: 100%;
+            max-width: 70rem;
+        }
+
+        &__box {
+            margin: 1rem 0;
+        }
+    }
 }
 
 .band-description {
     @include text('AvenirNext LT Pro', 0.8rem, 400);
     line-height: 1.5rem;
     color: $bandSite-black;
+
+    //tablet breakpoint
     @include tablet {
         @include flex-align-center;
         flex-direction: column;
@@ -94,6 +117,23 @@
             width: 36%;
             font-size: 1rem;
             line-height: 1.75;
+        }
+    }
+    //desktop breakpoint
+    @include desktop {
+        &__title {
+            margin: 1rem 0;
+        }
+
+        &__container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__p {
+            margin-right: 2rem;
+            width: 43%;
         }
     }
 }
