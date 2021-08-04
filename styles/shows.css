@@ -171,6 +171,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 2rem;
 }
 .shows-hero__text {
   display: flex;
@@ -194,6 +195,7 @@ body {
   line-height: 1.5;
 }
 .shows-hero__soundcloud {
+  min-width: 15rem;
   max-width: 20rem;
   padding-bottom: 2rem;
 }
@@ -210,6 +212,10 @@ body {
   }
   .shows-hero__sub-heading {
     font-size: 2rem;
+  }
+  .shows-hero__soundcloud {
+    position: absolute;
+    left: 2.5rem;
   }
 }
 
