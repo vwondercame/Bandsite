@@ -155,11 +155,11 @@ body {
 }
 
 .shows-hero {
-  background-image: url(../assets/Images/Photo-gallery-3.jpg);
+  background-image: url(../assets/Images/hero-shows.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 65vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 2rem;
 }
 .shows-hero__sub-heading {
   margin: 0;
@@ -184,7 +183,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   color: white;
-  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 .shows-hero__heading {
   margin: 0;
@@ -192,7 +191,6 @@ body {
   font-size: 2rem;
   font-weight: 600;
   color: white;
-  padding-left: 1.5rem;
   line-height: 1.5;
 }
 .shows-hero__soundcloud {
@@ -201,11 +199,17 @@ body {
 }
 @media (min-width: 768px) {
   .shows-hero {
-    min-height: 75vh;
+    min-height: 80vh;
     max-height: 83vh;
+  }
+  .shows-hero__overlay {
+    padding: 2rem;
   }
   .shows-hero__heading {
     font-size: 3.75rem;
+  }
+  .shows-hero__sub-heading {
+    font-size: 2rem;
   }
 }
 

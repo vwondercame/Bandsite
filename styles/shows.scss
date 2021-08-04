@@ -12,11 +12,11 @@ body {
 }
 
 .shows-hero {
-    background-image: url(../assets/Images/Photo-gallery-3.jpg);
+    background-image: url(../assets/Images/hero-shows.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 50vh;  
+    min-height: 65vh;  
     position: relative;
 
     //to align the soundcloud iframe 
@@ -36,21 +36,19 @@ body {
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding-top: 2rem;
     }
   
     &__sub-heading {
         margin: 0;
         @include text('AvenirNext LT Pro', 1rem, 400);
         color: white;
-        padding-left: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     &__heading {
       margin: 0;
       @include text('AvenirNext LT Pro', 2rem, 600);
       color: white;
-      padding-left: 1.5rem;
       line-height: 1.5;
     }
 
@@ -60,11 +58,20 @@ body {
     }
 
   @include tablet {
-      min-height: 75vh;
-      max-height: 83vh;
-      &__heading {
-        font-size: 3.75rem;
-      }
+        min-height: 80vh;
+        max-height: 83vh;
+
+        &__overlay {
+            padding: 2rem;
+        }
+
+        &__heading {
+            font-size: 3.75rem;
+        }
+
+        &__sub-heading {
+            font-size: 2rem;
+        }
     }
   }
 
