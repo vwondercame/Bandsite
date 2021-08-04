@@ -59,6 +59,7 @@
 }
 .nav a:hover {
   border-bottom: 3px solid white;
+  padding-bottom: 12px;
 }
 @media (min-width: 768px) {
   .nav {

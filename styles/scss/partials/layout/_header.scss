@@ -52,6 +52,7 @@
 
     & a:hover {
         border-bottom: 3px solid white;
+        padding-bottom: 12px;
     }
 
     @include tablet {
