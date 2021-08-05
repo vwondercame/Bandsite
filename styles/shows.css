@@ -220,11 +220,36 @@ body {
 }
 
 .shows-list {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .shows-list__title {
   font-family: "AvenirNext LT Pro";
   font-size: 3rem;
   font-weight: 600;
   color: black;
+}
+
+.shows-card__sub-heading {
+  font-family: "AvenirNext LT Pro";
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #AFAFAF;
+  margin: 0;
+}
+.shows-card__detail {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+}
+.shows-card__cta {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #323232;
+  padding: 1rem;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=shows.css.map */

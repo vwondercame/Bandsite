@@ -84,13 +84,31 @@ body {
   }
 
   .shows-list {
-    padding: 1rem;
+    padding: 1.5rem;
     &__title{
     @include text('AvenirNext LT Pro', 3rem, 600);
     color: black ;
-    // padding-left: 1.5rem;
   }
 }
 
-//   .shows-card
-// }
+  .shows-card {
+      &__sub-heading {
+        @include text('AvenirNext LT Pro', 0.9rem, 600);
+        color: $silver;
+        margin: 0;
+      }
+      &__detail {
+        @include text('AvenirNext LT Pro', 1rem, 400);
+        color: black;
+      }
+
+      &__cta {
+        @include text('AvenirNext LT Pro', 1.25rem, 600);
+        background-color:$bandSite-black;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+      }
+  }
