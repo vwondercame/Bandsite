@@ -229,6 +229,9 @@ body {
   color: black;
 }
 
+.shows-card__description {
+  margin-bottom: 2rem;
+}
 .shows-card__sub-heading {
   font-family: "AvenirNext LT Pro";
   font-size: 0.9rem;
