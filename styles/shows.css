@@ -219,11 +219,12 @@ body {
   }
 }
 
-.shows-section {
+.shows-list {
+  padding: 1rem;
+}
+.shows-list__title {
   font-family: "AvenirNext LT Pro";
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   color: black;
-  font-size: 2rem;
-  padding-left: 1.5rem;
 }/*# sourceMappingURL=shows.css.map */
