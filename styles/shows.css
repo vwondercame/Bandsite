@@ -229,6 +229,10 @@ body {
   color: black;
 }
 
+.shows-card {
+  border-bottom: 2px solid #E1E1E1;
+  margin-bottom: 1rem;
+}
 .shows-card__description {
   margin-bottom: 2rem;
 }

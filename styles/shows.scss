@@ -92,6 +92,8 @@ body {
 }
 
   .shows-card {
+        border-bottom: 2px solid $mercury;
+        margin-bottom: 1rem;
       &__description {
         margin-bottom: 2rem;
       }
