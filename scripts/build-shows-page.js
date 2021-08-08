@@ -112,17 +112,17 @@ const generateCardContent = (showsData) => {
 }
 
 const generateCardList = (cardInfo) => {
-  // cardInfo.forEach((showCard) => {
-  //   const showsData = cardInfo[i];
-  //   const showsCard = generateCardContent(showsData);
-  //   showsList.appendChild(showsCard);
-  // });
-
-    for(let i = 0; i < cardInfo.length; i++) {   //how do I write this as a forEach loop???
+  cardInfo.forEach((showCard) => {
     const showsData = cardInfo[i];
     const showsCard = generateCardContent(showsData);
     showsList.appendChild(showsCard);
-  }
+  });
+
+  //   for(let i = 0; i < cardInfo.length; i++) {   //how do I write this as a forEach loop???
+  //   const showsData = cardInfo[i];
+  //   const showsCard = generateCardContent(showsData);
+  //   showsList.appendChild(showsCard);
+  // }
 }
 
 // Start here
