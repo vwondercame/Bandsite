@@ -62,6 +62,9 @@ const showsList = document.querySelector('.shows-list');
 
 const generateCardList = () => {
 
+// cardInfo.forEach((showsData)=> {
+//   console.log(showsData); // how do I write this as a forEach loop???
+
   for(let i = 0; i < cardInfo.length; i++) {
     const showsData = cardInfo[i];
     console.log(showsData);
@@ -127,11 +130,3 @@ generateCardList();
  
 
 
-
-
-
-
-// cardInfo.forEach((showsData)=> {
-//   console.log(showsData); // how do I write this as a forEach loop???
-
- 
