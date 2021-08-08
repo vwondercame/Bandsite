@@ -5,6 +5,7 @@
 @use "./partials/layout/about";
 @use "./partials/layout/gallery";
 @use "./partials/layout/footer";
+@use "./partials/layout/comments";
 
 
 
@@ -15,4 +16,3 @@
 body {
     margin: 0;
 }
-

@@ -1,0 +1,23 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+@use "../utilities/typography" as *;
+
+.comment-section {
+    margin: 1rem;
+    font-family: $mainFont;
+
+    &__avi {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    &__avi-img {
+        width: 5.5rem;
+        height: auto;
+        margin-left: -9px;
+        margin-top: -5px;
+    }
+}
