@@ -13,6 +13,7 @@
         height: 50px;
         overflow: hidden;
         border-radius: 50%;
+        margin-right: 1rem;
     }
     &__avi-img {
         width: 5.5rem;
@@ -20,4 +21,32 @@
         margin-left: -9px;
         margin-top: -5px;
     }
+
+    &__form-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+
+        &--name-field {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        &--comment-field {
+            width: 100%;
+            height: 5rem;
+            margin: 0.5rem;
+        }
+    }
 }
+
