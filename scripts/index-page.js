@@ -148,7 +148,6 @@ const commentForm = document.querySelector('#form');
 
 commentForm.addEventListener('submit', function(event) {
     event.preventDefault();
-   
     
     const newComment = {
         name: event.target.formName.value,

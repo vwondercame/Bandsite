@@ -116,16 +116,15 @@ const generateCardContent = (showsData) => {
       showsButton.innerText = 'Buy Tickets';
       showsCard.appendChild(showsButton);
 
+      showsButton.addEventListener('click', function() {
+        console.log(showsData.venue);
+      });
+
   return showsCard;
 }
 
-const generateCardList = (cardInfo) => {
-  // cardInfo.forEach((showCard) => {
-  //   const showsData = cardInfo[i];
-  //   const showsCard = generateCardContent(showsData);
-  //   showsList.appendChild(showsCard);
-  // });
 
+const generateCardList = (cardInfo) => {
     for(let i = 0; i < cardInfo.length; i++) {   //how do I write this as a forEach loop???
     const showsData = cardInfo[i];
     const showsCard = generateCardContent(showsData);
@@ -135,7 +134,3 @@ const generateCardList = (cardInfo) => {
 
 // Start here
 generateCardList(cardInfo);
-
- 
-
-
