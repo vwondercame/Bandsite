@@ -21,6 +21,7 @@
 </article> */}
 
 
+//shows cards info array
 let cardInfo = [
     {
       dates: 'Mon Sept 06 2021 ',
@@ -56,6 +57,7 @@ let cardInfo = [
 
 const showsList = document.querySelector('.shows-list');
 
+//a function for creating shows card content
 const generateCardContent = (showsData) => {
       //create article class="shows-card" 
       const showsCard = document.createElement('article');
@@ -112,17 +114,17 @@ const generateCardContent = (showsData) => {
 }
 
 const generateCardList = (cardInfo) => {
-  cardInfo.forEach((showCard) => {
-    const showsData = cardInfo[i];
-    const showsCard = generateCardContent(showsData);
-    showsList.appendChild(showsCard);
-  });
-
-  //   for(let i = 0; i < cardInfo.length; i++) {   //how do I write this as a forEach loop???
+  // cardInfo.forEach((showCard) => {
   //   const showsData = cardInfo[i];
   //   const showsCard = generateCardContent(showsData);
   //   showsList.appendChild(showsCard);
-  // }
+  // });
+
+    for(let i = 0; i < cardInfo.length; i++) {   //how do I write this as a forEach loop???
+    const showsData = cardInfo[i];
+    const showsCard = generateCardContent(showsData);
+    showsList.appendChild(showsCard);
+  }
 }
 
 // Start here

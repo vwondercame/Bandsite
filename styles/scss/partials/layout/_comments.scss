@@ -48,5 +48,14 @@
             margin: 0.5rem;
         }
     }
+
+    &__list {
+        list-style: none;
+    }
+
+    .comment-section__comment--date-time{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
