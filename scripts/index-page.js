@@ -72,7 +72,7 @@ let commentInfo = [
     {
         name: "Miles Acosta",
         date: "12/20/2020",
-        txt: "I cant stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough."
+        txt: "I cant stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     }
 ];
 
@@ -112,7 +112,6 @@ const generateCommentContent = (commentData) => {
     commentName.classList.add('comment-section__name');
     commentName.innerText = commentData.name;
     dateTimeContainer.appendChild(commentName);
-    console.log(commentInfo.name);
 
     // create <p class="comment-section__date">01/09/2021</p> inside dateTimeContainer
     const commentDate = document.createElement("p");
@@ -130,8 +129,8 @@ const generateCommentContent = (commentData) => {
     return commentList;
 }
 
-
-const generateCommentList = (comments) => {
+//a function that generates and appends comments to the comment list
+const displayComment = (comments) => {
     comments.forEach((item)=> {
         const commentData = item;
         const commentList = generateCommentContent(commentData);
@@ -141,6 +140,23 @@ const generateCommentList = (comments) => {
 
 //start here
 
-generateCommentList(commentInfo);
+displayComment(commentInfo);
 
-//const commentForm = document.querySelector('#form');
+//html comment form functionality 
+
+const commentForm = document.querySelector('#form');
+
+commentForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+   
+    
+    const newComment = {
+        name: event.target.formName.value,
+        date: new Date(Date.now()),
+        txt: event.target.formComment.value
+    }
+    commentInfo.unshift(newComment);
+    commentList.innerHTML = '';
+    displayComment(commentInfo);
+    commentForm.reset();
+});
