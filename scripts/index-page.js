@@ -61,17 +61,29 @@
 let commentInfo = [
     {
         name: "Connor Walton",
-        date: "02/17/2021",
+        date: {
+            year: 2021,
+            month: 2,
+            day: 17
+        },
         txt: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
     },
     {
         name: "Emilie Beach",
-        date: "01/09/2021",
+        date: {
+            year: 2021,
+            month: 9,
+            day: 1
+        },
         txt: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
     },
     {
         name: "Miles Acosta",
-        date: "12/20/2020",
+        date: {
+            year: 2020,
+            month: 12,
+            day: 20
+        },
         txt: "I cant stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     }
 ];
@@ -116,7 +128,7 @@ const generateCommentContent = (commentData) => {
     // create <p class="comment-section__date">01/09/2021</p> inside dateTimeContainer
     const commentDate = document.createElement("p");
     commentDate.classList.add('comment-section__date');
-    commentDate.innerText = commentData.date;
+    commentDate.innerText = commentData.date.month + '/' + commentData.date.day + '/' + commentData.date.day;
     dateTimeContainer.appendChild(commentDate);
 
     //create <p class="comment-section__comment-text"> inside commentContainer
@@ -148,10 +160,15 @@ const commentForm = document.querySelector('#form');
 
 commentForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    
+    let commentDate = new Date();
+
     const newComment = {
         name: event.target.formName.value,
-        date: new Date(Date.now()),
+        date: {
+            year: commentDate.getFullYear(),
+            month: commentDate.getMonth() + 1,
+            day: commentDate.getDate()
+        },
         txt: event.target.formComment.value
     }
     commentInfo.unshift(newComment);
