@@ -106,7 +106,7 @@ const generateCommentContent = (commentData) => {
 
     //create <div class="comment__avi-container">
     const commentAviContainer = document.createElement("div");
-    commentAviContainer.classList.add('comment__avi-container');
+    commentAviContainer.classList.add('comment-section__avi-container');
     commentItem.appendChild(commentAviContainer);
 
     //create <div class="comment-section__comment"> inside commentItem
@@ -133,7 +133,7 @@ const generateCommentContent = (commentData) => {
 
     //create <p class="comment-section__comment-text"> inside commentContainer
     const commentText = document.createElement("p");
-    commentText.classList.add('comment-section__name');
+    commentText.classList.add('comment-section__txt');
     commentText.innerText = commentData.txt;
     commentContainer.appendChild(commentText);
 
@@ -171,8 +171,8 @@ commentForm.addEventListener('submit', function(event) {
         },
         txt: event.target.formComment.value
     }
-    commentInfo.unshift(newComment);
-    commentList.innerHTML = '';
-    displayComment(commentInfo);
-    commentForm.reset();
+        commentInfo.unshift(newComment);
+        commentList.innerHTML = '';
+        displayComment(commentInfo);
+        commentForm.reset();
 });

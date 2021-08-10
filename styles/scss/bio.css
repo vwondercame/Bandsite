@@ -378,11 +378,14 @@
   margin: 1rem;
   font-family: "AvenirNext LT Pro";
 }
+.comment-section__header {
+  font-size: 2rem;
+}
 .comment-section__avi {
   display: inline-block;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   border-radius: 50%;
   margin-right: 1rem;
@@ -391,12 +394,13 @@
   width: 5.5rem;
   height: auto;
   margin-left: -9px;
-  margin-top: -5px;
+  margin-top: -10px;
 }
 .comment-section__form-container {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
+  padding-bottom: 1rem;
 }
 .comment-section__form {
   display: flex;
@@ -404,24 +408,115 @@
   justify-content: space-between;
   align-items: flex-start;
   height: 100%;
-  width: 100%;
+  width: 75%;
+  margin-left: 0.5rem;
+}
+.comment-section__form--name-title, .comment-section__form--comment-title {
+  font-size: 0.8rem;
+  color: #AFAFAF;
+  font-weight: 600;
 }
 .comment-section__form--name-field {
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   padding: 0.5rem;
   width: 100%;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+}
+.comment-section__form--name-field:active {
+  border: 1px solid #323232;
 }
 .comment-section__form--comment-field {
   width: 100%;
   height: 5rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+}
+.comment-section__btn-container {
+  width: 100%;
+}
+.comment-section__btn {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  padding: 1rem;
+  background-color: #323232;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
 }
 .comment-section__list {
   list-style: none;
+  padding: 0;
+}
+.comment-section__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+}
+.comment-section__comment {
+  border-bottom: 2px #E1E1E1;
+  margin: 0 1rem;
+}
+.comment-section__avi-container {
+  background: #E1E1E1;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding-left: 45px;
+}
+.comment-section__name {
+  margin-top: 0;
+}
+.comment-section__date {
+  margin-top: 0;
+  color: #AFAFAF;
+}
+.comment-section__txt {
+  margin-top: 0;
+  line-height: 1.5;
 }
 .comment-section .comment-section__comment--date-time {
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .comment-section {
+    margin: 3rem auto 2rem;
+    width: 80%;
+  }
+  .comment-section__header {
+    font-size: 3rem;
+  }
+  .comment-section__avi {
+    width: 48px;
+    height: 48px;
+  }
+  .comment-section__btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .comment-section__btn {
+    width: 40%;
+    margin: 1rem 0;
+  }
+  .comment-section__form--name-title, .comment-section__form--comment-title {
+    font-size: 1rem;
+  }
+  .comment-section__form--name-field {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-section {
+    width: 70%;
+  }
 }
 
 *, *::before, *::after {
