@@ -83,6 +83,23 @@ body {
     }
   }
 
+  .shows {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .shows__subheading--td{
+    display: none;
+    @include tablet {
+      font-family: $mainFont;
+      font-size: 1rem;
+      color: $silver;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+
   .shows-list {
     padding: 1.5rem;
     &__title{

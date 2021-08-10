@@ -57,12 +57,44 @@ let cardInfo = [
 
 const showsList = document.querySelector('.shows-list');
 
-//a function for creating shows card content
-const generateCardContent = (showsData) => {
-      //create article class="shows-card" 
-      const showsCard = document.createElement('article');
+// create a ul list shows
+const shows = document.createElement('ul');
+shows.classList.add('shows');
+showsList.appendChild(shows);
+
+//create a li item only for tablet/desktop view
+      const showsSubHeadingTD = document.createElement('li');
+      showsSubHeadingTD.classList.add('shows__subheading--td');
+      shows.appendChild(showsSubHeadingTD);
+
+      // create <h4 class="shows-card__sub-heading">VENUES</h4>
+      const datesSubheading = document.createElement('h3');
+      datesSubheading.classList.add('shows__subheading--td-dates');
+      datesSubheading.innerText = 'DATES';
+      showsSubHeadingTD.appendChild(datesSubheading);
+
+      // create <h4 class="shows-card__sub-heading">VENUES</h4>
+      const venueSubheading = document.createElement('h3');
+      venueSubheading.classList.add('shows__subheading--td-venue');
+      venueSubheading.innerText = 'VENUE';
+      showsSubHeadingTD.appendChild(venueSubheading);
+
+      // create <h4 class="shows-card__sub-heading">VENUES</h4>
+      const locationSubheading = document.createElement('h3');
+      locationSubheading.classList.add('shows__subheading--td-location');
+      locationSubheading.innerText = 'LOCATION';
+      showsSubHeadingTD.appendChild(locationSubheading);
+//end of table/desktop only view
+
+
+
+    //a function for creating shows card content
+    const generateCardContent = (showsData) => {
+      
+      //create list item 
+      const showsCard = document.createElement('li');
       showsCard.classList.add('shows-card');
-      showsList.appendChild(showsCard);
+      shows.appendChild(showsCard);
     
       // create div class="shows-card__description
       const showsCardDescription = document.createElement('div');
@@ -125,10 +157,10 @@ const generateCardContent = (showsData) => {
 
 
 const generateCardList = (cardInfo) => {
-    for(let i = 0; i < cardInfo.length; i++) {   //how do I write this as a forEach loop???
+    for(let i = 0; i < cardInfo.length; i++) {
     const showsData = cardInfo[i];
     const showsCard = generateCardContent(showsData);
-    showsList.appendChild(showsCard);
+    shows.appendChild(showsCard);
   }
 }
 

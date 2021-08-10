@@ -219,6 +219,24 @@ body {
   }
 }
 
+.shows {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shows__subheading--td {
+  display: none;
+}
+@media (min-width: 768px) {
+  .shows__subheading--td {
+    font-family: "AvenirNext LT Pro";
+    font-size: 1rem;
+    color: #AFAFAF;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .shows-list {
   padding: 1.5rem;
 }

@@ -401,6 +401,7 @@
   flex-wrap: nowrap;
   align-items: flex-start;
   padding-bottom: 1rem;
+  border-bottom: 2px solid #E1E1E1;
 }
 .comment-section__form {
   display: flex;
@@ -456,7 +457,8 @@
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding-bottom: 1rem;
+  border-bottom: 2px solid #E1E1E1;
+  margin-bottom: 1rem;
 }
 .comment-section__comment {
   border-bottom: 2px #E1E1E1;
