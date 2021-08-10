@@ -84,7 +84,7 @@ showsList.appendChild(shows);
       locationSubheading.classList.add('shows__subheading--td-location');
       locationSubheading.innerText = 'LOCATION';
       showsSubHeadingTD.appendChild(locationSubheading);
-//end of table/desktop only view
+      //end of table/desktop only view
 
 
 
