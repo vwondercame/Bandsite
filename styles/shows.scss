@@ -146,8 +146,6 @@ body {
   @include tablet {
     display: flex;
     justify-content: space-between;
-    &__description {
-    }
     &__sub-heading {
       display: none;
     }
@@ -157,7 +155,9 @@ body {
     }
 
     &__detail {
-      margin-right: 8rem;
+      width: 25%;
+      margin-right: 9rem;
+      align-self: center;
       // &:nth-child(2) {
       //   margin-right: 5rem;
       // }

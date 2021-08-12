@@ -61,11 +61,7 @@ const generateCommentContent = (commentData) => {
   const commentDate = document.createElement("p");
   commentDate.classList.add("comment-section__date");
   commentDate.innerText =
-    commentData.month +
-    "/" +
-    commentData.day +
-    "/" +
-    commentData.year;
+    commentData.month + "/" + commentData.day + "/" + commentData.year;
   dateTimeContainer.appendChild(commentDate);
 
   //create <p class="comment-section__comment-text"> inside commentContainer
@@ -79,50 +75,66 @@ const generateCommentContent = (commentData) => {
 
 //a function that generates and appends comments to the comment list
 const displayComment = (comments) => {
-    comments.forEach((item) => {
-      const commentData = item;
-      const commentList = generateCommentContent(commentData);
-      commentSection.appendChild(commentList);
-    });
-  };
-  
-  let commentArray = [];
+  comments.forEach((item) => {
+    const commentData = item;
+    const commentList = generateCommentContent(commentData);
+    commentSection.appendChild(commentList);
+  });
+};
 
- //displaying the comments
-  axios
+let commentArray = [];
+
+//displaying the comments
+function getComments() {
+  return axios
     .get(`${BAND_API_URL}/comments?api_key=${BAND_API_KEY}`)
+    .then((res) => {
+      const newArr = res.data.map((item) => {
+        return {
+          ...item,
+          day: `${new Date(item.timestamp).getUTCDate()}`,
+          month: `${new Date(item.timestamp).getMonth() + 1}`,
+          year: `${new Date(item.timestamp).getFullYear()}`,
+        };
+      });
+      console.log(newArr);
+      displayComment(newArr);
+    }).catch((error) =>
+    console.log(error)
+    );
+}
+
+
+getComments();
+function postComment(comment) {
+  return axios
+    .post(`${BAND_API_URL}/comments?api_key=${BAND_API_KEY}`, comment)
     .then((response) => {
       console.log(response.data);
-      commentArray = response.data.map((comment, i)=> {
-          return {...comment, ...dates[i]}
-      });
-      console.log(commentArray);
-      displayComment(commentArray);
     })
     .catch((error) => {
       console.log(error);
     });
+}
 
 //start here
 
 //html comment form functionality
 const commentForm = document.querySelector("#form");
 
-commentForm.addEventListener("submit",(event) => {
+commentForm.addEventListener("submit", (event) => {
   event.preventDefault();
   let commentDate = new Date();
-
+  const commentList = document.querySelector(".comment-section__list");
   const newComment = {
     name: event.target.formName.value,
-    date: {
-      year: commentDate.getFullYear(),
-      month: commentDate.getMonth() + 1,
-      day: commentDate.getDate(),
-    },
+    // year: commentDate.getFullYear(),
+    // month: commentDate.getMonth() + 1,
+    // day: commentDate.getDate(),
     comment: event.target.formComment.value,
   };
-  commentArray.unshift(newComment);
+  postComment(newComment);
   commentList.innerHTML = "";
-  displayComment(commentArray);
   commentForm.reset();
+  getComments();
 });
