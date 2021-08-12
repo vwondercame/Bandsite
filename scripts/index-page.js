@@ -86,18 +86,18 @@ const displayComment = (comments) => {
     });
   };
   
-  let commentInfo = [];
+  let commentArray = [];
 
- //displaying the default comments
+ //displaying the comments
   axios
     .get(`${BAND_API_URL}/comments?api_key=${BAND_API_KEY}`)
     .then((response) => {
       console.log(response.data);
-      commentInfo = response.data.map((comment, i)=> {
+      commentArray = response.data.map((comment, i)=> {
           return {...comment, ...dates[i]}
       });
-      console.log(commentInfo);
-      displayComment(commentInfo);
+      console.log(commentArray);
+      displayComment(commentArray);
     })
     .catch((error) => {
       console.log(error);
@@ -121,8 +121,8 @@ commentForm.addEventListener("submit",(event) => {
     },
     comment: event.target.formComment.value,
   };
-  commentInfo.unshift(newComment);
+  commentArray.unshift(newComment);
   commentList.innerHTML = "";
-  displayComment(commentInfo);
+  displayComment(commentArray);
   commentForm.reset();
 });

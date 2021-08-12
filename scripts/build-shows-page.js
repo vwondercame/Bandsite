@@ -69,19 +69,19 @@ showsList.appendChild(shows);
 
       // create <h4 class="shows-card__sub-heading">VENUES</h4>
       const datesSubheading = document.createElement('h3');
-      datesSubheading.classList.add('shows__subheading--td-dates');
+      datesSubheading.classList.add('shows__subheading--td-dates', 'shows__subheading--td-item');
       datesSubheading.innerText = 'DATES';
       showsSubHeadingTD.appendChild(datesSubheading);
 
       // create <h4 class="shows-card__sub-heading">VENUES</h4>
       const venueSubheading = document.createElement('h3');
-      venueSubheading.classList.add('shows__subheading--td-venue');
+      venueSubheading.classList.add('shows__subheading--td-venue', 'shows__subheading--td-item');
       venueSubheading.innerText = 'VENUE';
       showsSubHeadingTD.appendChild(venueSubheading);
 
       // create <h4 class="shows-card__sub-heading">VENUES</h4>
       const locationSubheading = document.createElement('h3');
-      locationSubheading.classList.add('shows__subheading--td-location');
+      locationSubheading.classList.add('shows__subheading--td-location', 'shows__subheading--td-item');
       locationSubheading.innerText = 'LOCATION';
       showsSubHeadingTD.appendChild(locationSubheading);
       //end of table/desktop only view
