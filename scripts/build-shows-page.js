@@ -87,7 +87,6 @@ showsList.appendChild(shows);
       //end of table/desktop only view
 
 
-
     //a function for creating shows card content
     const generateCardContent = (showsData) => {
       
