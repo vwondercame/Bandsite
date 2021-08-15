@@ -112,7 +112,7 @@
             justify-content: space-evenly;
         }
     }
-    &__p {
+    &__content {
         @include tablet {
             width: 36%;
             font-size: 1rem;
@@ -131,7 +131,7 @@
             justify-content: space-between;
         }
 
-        &__p {
+        &__content {
             margin-right: 2rem;
             width: 43%;
         }

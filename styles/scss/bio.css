@@ -59,7 +59,7 @@
 }
 .nav a:hover {
   border-bottom: 3px solid white;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 }
 @media (min-width: 768px) {
   .nav {
@@ -71,6 +71,10 @@
     justify-content: space-evenly;
     width: 100%;
     padding-bottom: 0;
+  }
+  .nav__link a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 33px;
   }
 }
 
@@ -233,7 +237,7 @@
   }
 }
 @media (min-width: 768px) {
-  .band-description__p {
+  .band-description__content {
     width: 36%;
     font-size: 1rem;
     line-height: 1.75;
@@ -248,7 +252,7 @@
     display: flex;
     justify-content: space-between;
   }
-  .band-description__p {
+  .band-description__content {
     margin-right: 2rem;
     width: 43%;
   }

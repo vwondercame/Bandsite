@@ -28,7 +28,6 @@
     }
 
 //desktop breakpoint styling
-
 }
 
 //navigation styles
@@ -52,7 +51,7 @@
 
     & a:hover {
         border-bottom: 3px solid white;
-        padding-bottom: 12px;
+        padding-bottom: 13px;
     }
 
     @include tablet {
@@ -65,6 +64,18 @@
             width: 100%;
             padding-bottom: 0;
         }
+
+        &__link {
+            & a:hover {
+                border-bottom: 3px solid white;
+                padding-bottom: 33px;
+            } 
+        }
+
+        // & a:hover {
+        //     border-bottom: 3px solid white;
+        //     padding-bottom: 33px;
+        // } 
     }
 
 }
