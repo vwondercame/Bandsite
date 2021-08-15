@@ -117,9 +117,8 @@ function postComment(comment) {
     });
 }
 
-//start here
 
-//html comment form functionality
+//comment form functionality
 const commentForm = document.querySelector("#form");
 
 commentForm.addEventListener("submit", (event) => {
@@ -128,9 +127,6 @@ commentForm.addEventListener("submit", (event) => {
   const commentList = document.querySelector(".comment-section__list");
   const newComment = {
     name: event.target.formName.value,
-    // year: commentDate.getFullYear(),
-    // month: commentDate.getMonth() + 1,
-    // day: commentDate.getDate(),
     comment: event.target.formComment.value,
   };
   postComment(newComment);
