@@ -1,21 +1,3 @@
-const dates = [
-  {
-    year: 2021,
-    month: 2,
-    day: 17,
-  },
-  {
-    year: 2021,
-    month: 01,
-    day: 09,
-  },
-  {
-    year: 2021,
-    month: 12,
-    day: 20,
-  },
-];
-
 const commentSection = document.querySelector(
   ".comment-section__list-container"
 );
@@ -28,6 +10,7 @@ const BAND_API_KEY = "7e86765a-d022-4e1e-9a42-4ade64d55a39";
 const commentList = document.createElement("ul");
 commentList.classList.add("comment-section__list");
 commentSection.appendChild(commentList);
+
 
 //a funciton for creating comment content
 const generateCommentContent = (commentData) => {
@@ -75,6 +58,7 @@ const generateCommentContent = (commentData) => {
 
 //a function that generates and appends comments to the comment list
 const displayComment = (comments) => {
+  const newCommentlist = comments.reverse();
   comments.forEach((item) => {
     const commentData = item;
     const commentList = generateCommentContent(commentData);
@@ -84,7 +68,7 @@ const displayComment = (comments) => {
 
 let commentArray = [];
 
-//displaying the comments
+//AXIOS GET comments
 function getComments() {
   return axios
     .get(`${BAND_API_URL}/comments?api_key=${BAND_API_KEY}`)
@@ -104,18 +88,20 @@ function getComments() {
     );
 }
 
-
 getComments();
+
+
 function postComment(comment) {
   return axios
     .post(`${BAND_API_URL}/comments?api_key=${BAND_API_KEY}`, comment)
     .then((response) => {
-      console.log(response.data);
+      getComments();
     })
     .catch((error) => {
       console.log(error);
     });
 }
+
 
 
 //comment form functionality
@@ -128,9 +114,8 @@ commentForm.addEventListener("submit", (event) => {
   const newComment = {
     name: event.target.formName.value,
     comment: event.target.formComment.value,
-  };
-  postComment(newComment);
+  }; 
   commentList.innerHTML = "";
+  postComment(newComment);
   commentForm.reset();
-  getComments();
 });
