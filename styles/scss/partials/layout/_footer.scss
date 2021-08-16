@@ -9,7 +9,7 @@
     padding: 2rem;
     background-color: $bandSite-black;
     color: white;
-    @include text('AvenirNext LT Pro', 1rem, 400);
+    @include text(1rem, 400);
     line-height: 1.5;
     &__title {
         font-size: 2rem;

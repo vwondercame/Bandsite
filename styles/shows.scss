@@ -11,6 +11,7 @@
 
 body {
   margin: 0;
+  font-family: $mainFont;
 }
 
 .shows-hero {
@@ -43,14 +44,14 @@ body {
 
   &__sub-heading {
     margin: 0;
-    @include text("AvenirNext LT Pro", 1rem, 400);
+    @include text(1rem, 400);
     color: white;
     margin-bottom: 1rem;
   }
 
   &__heading {
     margin: 0;
-    @include text("AvenirNext LT Pro", 2rem, 600);
+    @include text(2rem, 600);
     color: white;
     line-height: 1.5;
   }
@@ -107,7 +108,7 @@ body {
 .shows-list {
   margin: 1.5rem;
   &__title {
-    @include text("AvenirNext LT Pro", 3rem, 600);
+    @include text(3rem, 600);
     color: black;
   }
 
@@ -124,17 +125,17 @@ body {
     margin-bottom: 2rem;
   }
   &__sub-heading {
-    @include text("AvenirNext LT Pro", 0.9rem, 600);
+    @include text(0.9rem, 600);
     color: $silver;
     margin: 0;
   }
   &__detail {
-    @include text("AvenirNext LT Pro", 1rem, 400);
+    @include text(1rem, 400);
     color: black;
   }
 
   &__cta {
-    @include text("AvenirNext LT Pro", 1.25rem, 600);
+    @include text(1.25rem, 600);
     background-color: $bandSite-black;
     padding: 1rem;
     color: white;

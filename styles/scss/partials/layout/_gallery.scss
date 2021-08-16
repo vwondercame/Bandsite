@@ -3,7 +3,7 @@
 @use "../utilities/typography" as *;
 
 .gallery {
-    @include text('AvenirNext LT Pro', 1.25rem, 400);
+    @include text(1.25rem, 400);
     line-height: 1.5rem;
     color: $bandSite-black;
     padding: 1rem;

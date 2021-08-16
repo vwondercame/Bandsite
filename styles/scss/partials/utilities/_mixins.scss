@@ -23,8 +23,7 @@
     align-items: center;
   }
 
-@mixin text($fontFamily, $fontSize, $fontWeight) {
-    font-family: $fontFamily;
+@mixin text($fontSize, $fontWeight) {
     font-size: $fontSize;
     font-weight: $fontWeight;
   }

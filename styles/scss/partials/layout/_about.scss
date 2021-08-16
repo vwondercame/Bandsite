@@ -7,9 +7,10 @@
 .about {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.2rem;
     &__title {
-        @include text('AvenirNext LT Pro', 2rem, 600);
+        margin-top: 0.5rem;
+        @include text(2rem, 600);
         color: $bandSite-black;
 
         //tablet breakpoint styling
@@ -47,7 +48,7 @@
     }
 
     &__quote, &__quote-author {
-        @include text('AvenirNext LT Pro', 1rem, 600);
+        @include text(1.1rem, 600);
         line-height: 1.8;
         @include tablet {
             font-size: 1.75rem;
@@ -84,7 +85,7 @@
 }
 
 .band-description {
-    @include text('AvenirNext LT Pro', 0.8rem, 400);
+    @include text(1rem, 100);
     line-height: 1.5rem;
     color: $bandSite-black;
 
@@ -96,6 +97,7 @@
     }
     &__title {
         margin-bottom: 0;
+        font-weight: 100;
         @include tablet {
             align-self: flex-start;
             margin: 0 0 1rem 7rem;
@@ -113,9 +115,10 @@
         }
     }
     &__content {
+        font-size: 1.1rem;
         @include tablet {
             width: 36%;
-            font-size: 1rem;
+            font-size: 1.2rem;
             line-height: 1.75;
         }
     }

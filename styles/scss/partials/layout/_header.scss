@@ -8,7 +8,7 @@
     background-color: $bandSite-black;
     &__container {
         @include flex(center, center);
-        padding: 1rem;
+        padding: 1.5rem;
     }
     &__link {
         text-decoration: none;
@@ -21,8 +21,7 @@
 //tablet breakpoint styling
 
     @include tablet {
-        display: flex;
-        align-items: center;
+        @include flex-align-center;
         justify-content: flex-start;
         padding: 1rem;
     }
@@ -43,7 +42,6 @@
     }
 
     &__link {
-        font-family: 'AvenirNext LT Pro';
         font-size: 1rem;
         text-decoration: none;
         color: white;
