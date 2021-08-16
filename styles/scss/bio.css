@@ -101,7 +101,6 @@
   display: flex;
   align-items: center;
   height: 95%;
-  margin: 0;
   font-size: 2rem;
   font-weight: 600;
   color: white;
@@ -110,6 +109,8 @@
 @media (min-width: 768px) {
   .hero__heading {
     font-size: 3.75rem;
+    margin-left: 2.3rem;
+    height: 80%;
   }
 }
 
@@ -232,9 +233,6 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
   }
-}
-.band-description__content {
-  font-size: 1.1rem;
 }
 @media (min-width: 768px) {
   .band-description__content {

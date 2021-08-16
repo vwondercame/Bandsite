@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 65vh;
+  min-height: 49vh;
   position: relative;
 
   //to align the soundcloud iframe
@@ -57,6 +57,7 @@ body {
   }
 
   &__soundcloud {
+    height: 10rem;
     min-width: 15rem;
     max-width: 20rem;
     padding-bottom: 2rem;
@@ -132,16 +133,22 @@ body {
   &__detail {
     @include text(1rem, 400);
     color: black;
+
+    &--dates{
+      font-weight: bold;
+    }
   }
 
   &__cta {
     @include text(1.25rem, 600);
+    text-transform: uppercase;
     background-color: $bandSite-black;
     padding: 1rem;
     color: white;
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
   }
 
   @include tablet {

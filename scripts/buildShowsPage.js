@@ -70,7 +70,7 @@ const generateCardContent = (showsData) => {
 
   // create <p class="shows-card__detail">date detail</p>
   const showsCardDetail = document.createElement("p");
-  showsCardDetail.classList.add("shows-card__detail");
+  showsCardDetail.classList.add("shows-card__detail", "shows-card__detail--dates");
   let timestamp = parseInt(showsData.date);
   let date = new Date(timestamp).toString();
   showsCardDetail.innerText = date.split(" ").slice(1, 4).join(" ");
