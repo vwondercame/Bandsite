@@ -73,7 +73,7 @@ const generateCardContent = (showsData) => {
   showsCardDetail.classList.add("shows-card__detail");
   let timestamp = parseInt(showsData.date);
   let date = new Date(timestamp).toString();
-  showsCardDetail.innerText = date.split(" ").slice(1,4).join(' ');
+  showsCardDetail.innerText = date.split(" ").slice(1, 4).join(" ");
   showsCardContent.appendChild(showsCardDetail);
 
   // create <h4 class="shows-card__sub-heading">VENUES</h4>
@@ -107,7 +107,7 @@ const generateCardContent = (showsData) => {
   showsCard.appendChild(showsButton);
 
   showsButton.addEventListener("click", function () {
-    console.log(showsData.venue);
+    console.log(showsData.place);
   });
 
   return showsCard;
@@ -130,12 +130,7 @@ function getShows() {
     .get(`${SHOW_API_URL}/showdates?api_key=${SHOW_API_KEY}`)
     .then((res) => {
       const newArr = res.data.map((item) => {
-        return {
-          ...item
-          // day: `${new Date(item.date).getUTCDate()}`,
-          // month: `${new Date(item.date).getMonth() + 1}`,
-          // year: `${new Date(item.date).getFullYear()}`,
-        };
+        return {...item };
       });
       console.log(newArr);
       displayShow(newArr);
