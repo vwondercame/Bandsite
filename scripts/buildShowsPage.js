@@ -100,11 +100,11 @@ const generateCardContent = (showsData) => {
   showsCardDetail3.innerText = showsData.location;
   showsCardContent.appendChild(showsCardDetail3);
 
-  //create <div class="shows-card__cta"> BUY TICKETS</div> and append to showsCard
+  //create <div class="shows-card__cta"> BUY TICKETS</div>
   const showsButton = document.createElement("div");
   showsButton.classList.add("shows-card__cta");
   showsButton.innerText = "Buy Tickets";
-  showsCard.appendChild(showsButton);
+  showsCardContent.appendChild(showsButton);
 
   showsButton.addEventListener("click", function () {
     console.log(showsData.place);

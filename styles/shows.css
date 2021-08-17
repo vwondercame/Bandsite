@@ -203,14 +203,17 @@ body {
 }
 @media (min-width: 768px) {
   .shows-hero {
-    min-height: 80vh;
-    max-height: 83vh;
+    min-height: 90vh;
+    max-height: 95vh;
   }
   .shows-hero__overlay {
-    padding: 2rem;
+    padding: 2rem 3rem;
+  }
+  .shows-hero__text {
+    margin-top: 2rem;
   }
   .shows-hero__heading {
-    font-size: 3.75rem;
+    font-size: 5rem;
   }
   .shows-hero__sub-heading {
     font-size: 2rem;
@@ -218,6 +221,9 @@ body {
   .shows-hero__soundcloud {
     position: absolute;
     left: 2.5rem;
+    height: 12rem;
+    min-width: 34rem;
+    max-width: 36rem;
   }
 }
 
@@ -238,7 +244,7 @@ body {
     justify-content: flex-start;
   }
   .shows__subheading--td-item {
-    margin-right: 13rem;
+    width: 25%;
   }
 }
 
@@ -292,7 +298,6 @@ body {
 @media (min-width: 768px) {
   .shows-card {
     display: flex;
-    justify-content: space-between;
   }
   .shows-card__sub-heading {
     display: none;
@@ -301,14 +306,18 @@ body {
     display: flex;
     justify-content: space-around;
   }
+  .shows-card__description {
+    margin-bottom: 0;
+    width: 100%;
+  }
   .shows-card__detail {
     width: 25%;
-    margin-right: 9rem;
     align-self: center;
   }
   .shows-card__cta {
     align-self: center;
     width: 25%;
     text-transform: uppercase;
+    margin-left: auto;
   }
 }/*# sourceMappingURL=shows.css.map */
