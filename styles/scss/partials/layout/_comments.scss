@@ -1,0 +1,241 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+@use "../utilities/typography" as *;
+
+.comment-section {
+  margin: 1rem;
+
+  &__header {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+  }
+
+  &__avi {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-top: 1.3rem;
+  }
+
+  &__avi-img {
+    width: 5.5rem;
+    height: auto;
+    margin-left: -9px;
+    margin-top: -10px;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $mercury;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    width: 75%;
+    margin-left: 0.5rem;
+
+    &--name-title,
+    &--comment-title {
+      font-size: 0.8rem;
+      color: $silver;
+      font-weight: 600;
+    }
+
+    &--name-field {
+      margin: 0.5rem 0 1.2rem;
+      padding: 1rem;
+      width: 100%;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: rgb(250, 250, 250);
+
+      &:active {
+        border: 1px solid $bandSite-black;
+      }
+    }
+
+    &--comment-field {
+      width: 100%;
+      height: 5rem;
+      margin: 0.5rem 0 1.2rem;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: rgb(250, 250, 250);
+    }
+  }
+
+  &__btn-container {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  &__btn {
+    font-family: $mainFont;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding: 1rem;
+    background-color: $bandSite-black;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid $mercury;
+    margin-bottom: 1rem;
+  }
+
+  &__comment {
+    border-bottom: 2px $mercury;
+    margin: 0 1rem;
+    width: 100%;
+  }
+
+  &__avi-container {
+    background: $mercury;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding-left: 45px;
+  }
+
+  &__name {
+    margin-top: 0;
+  }
+
+  &__date {
+    margin-top: 0;
+    color: $silver;
+  }
+
+  &__txt {
+    margin-top: 0;
+    line-height: 1.5;
+  }
+
+  .comment-section__comment--date-time {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    margin: 3rem auto 2rem;
+    width: 80%;
+    &__header {
+      font-size: 3rem;
+    }
+
+    &__avi {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__btn-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__btn {
+      width: 40%;
+      margin: 1rem 0;
+    }
+
+    &__form {
+      &--name-title,
+      &--comment-title {
+        font-size: 1rem;
+
+        @include desktop {
+          font-size: 1.2rem;
+        }
+      }
+      &--name-field {
+        margin: 1rem 0;
+        padding: 1rem;
+        width: 100%;
+
+        @include desktop {
+          padding: 1.5rem;
+        }
+      }
+
+      &--comment-field {
+        height: 7rem;
+
+        @include desktop {
+          height: 10rem;
+        }
+      }
+
+      &__comment {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  @include desktop {
+    max-width: 70%;
+    &__avi {
+      width: 60px;
+      height: 60px;
+
+      &-img {
+        margin-top: 1px;
+      }
+    }
+
+    &__btn {
+      width: 38%;
+      font-size: 1.25rem;
+    }
+
+    &__list-container {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    &__form-container {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__item {
+      padding: 1rem;
+    }
+
+    &__txt {
+      font-size: 1.2rem;
+    }
+
+    &__avi-container {
+      width: 60px;
+      height: 60px;
+      padding-left: 50px;
+    }
+  }
+}

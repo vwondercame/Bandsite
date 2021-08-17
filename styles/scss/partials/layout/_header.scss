@@ -5,65 +5,78 @@
 //header styling
 
 .header {
-    background-color: $bandSite-black;
-    &__container {
-        @include flex(center, center);
-        padding: 1rem;
-    }
-    &__link {
-        text-decoration: none;
-    }
+  background-color: $bandSite-black;
+  &__container {
+    @include flex(center, center);
+    padding: 1.5rem;
+  }
+  &__link {
+    text-decoration: none;
+  }
 
-    &__logo {
-        height: 1.5rem;
-    }
-    
-//tablet breakpoint styling
+  &__logo {
+    height: 1.5rem;
+  }
 
-    @include tablet {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 1rem;
-    }
+  @include tablet {
+    @include flex-align-center;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
 
-//desktop breakpoint styling
-
+  @include desktop {
+    padding: 2rem 5rem;
+  }
 }
 
 //navigation styles
 
 .nav {
-    &__list {
-        display: flex;
-        justify-content: space-around;
-        padding-left: 0;
-        padding-bottom: 1rem;
-        margin: 0;
-        list-style: none;
-    }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+    padding-bottom: 1rem;
+    margin: 0;
+    list-style: none;
+  }
 
-    &__link {
-        font-family: 'AvenirNext LT Pro';
-        font-size: 1rem;
-        text-decoration: none;
-        color: white;
+  &__link {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  & a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 13px;
+  }
+
+  @include tablet {
+    display: flex;
+    width: 50%;
+
+    &__list {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      padding-bottom: 0;
     }
 
     & a:hover {
-        border-bottom: 3px solid white;
+      padding-bottom: 41px;
     }
+  }
 
-    @include tablet {
-        display: flex;
-        width: 50%;
-
-        &__list {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            padding-bottom: 0;
-        }
+  @include desktop {
+    &__list {
+      width: 40%;
     }
-
+    &__link {
+      font-size: 1.25rem;
+    }
+    & a:hover {
+      padding-bottom: 54px;
+    }
+  }
 }
