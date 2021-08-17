@@ -80,6 +80,19 @@
 
         &__box {
             margin: 1rem 0;
+            max-width: 70rem;
+            margin: 0 auto;
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+
+        .band-description{
+            max-width: 70rem;
+            margin: 0 auto; 
+
+            &__title{
+                font-weight: 600;
+            }
         }
     }
 }
